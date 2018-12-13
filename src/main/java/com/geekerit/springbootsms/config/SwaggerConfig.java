@@ -2,6 +2,7 @@ package com.geekerit.springbootsms.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -19,6 +20,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
+@Profile(value = "dev")
 public class SwaggerConfig {
 
     @Bean
@@ -44,7 +46,7 @@ public class SwaggerConfig {
                 // 设置接口描述
                 .description("springboot集成阿里云短信服务")
                 // 设置联系方式
-                .contact("南城，" + "http://www.chengnanhuakai.com")
+                .contact("南城，" + "http://blog.geekerit.com")
                 // 设置版本
                 .version("1.0")
                 // 构建
